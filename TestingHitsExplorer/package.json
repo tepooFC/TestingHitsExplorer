@@ -1,0 +1,32 @@
+{
+  "name": "testinghitsexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tepooFC/TestingHitsExplorer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tepooFC/TestingHitsExplorer/issues"
+  },
+  "homepage": "https://github.com/tepooFC/TestingHitsExplorer#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^20.9.0",
+    "jest": "^26.6.3",
+    "jest-playwright-preset": "^1.4.5",
+    "playwright": "^1.39.0",
+    "ts-jest": "^26.5.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "otpauth": "^9.2.2"
+  }
+}
