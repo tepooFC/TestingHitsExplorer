@@ -6,6 +6,9 @@ dotenv.config();
 test('Explorer Gmail IDP Login Test', async ({ page }) => {
 
   await page.goto('https://www.google.com/');
+// Line added due to the default Language of the browser because of the ip.
+  await page.click('text="English"');
+
   await page.getByLabel('Sign in').click();
   await page.waitForTimeout(2000);
   await page.getByLabel('Email or phone').fill(process.env.Explorer_USER);
@@ -26,8 +29,9 @@ test('Explorer Gmail IDP Login Test', async ({ page }) => {
   await page.waitForLoadState('load');
   await page.waitForTimeout(3000);
   await page.getByText('Google').click();
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(3000);
   await page.locator('div').filter({ hasText: /^ExplorerExploration and Visualization tools for screening data\.$/ }).nth(1).click();
+  await page.waitForTimeout(2000);
   await page.getByText('HiTS Explorer').click();
 
    // Verify that the user is logged in by takin a screenshot of the dashboard

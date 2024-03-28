@@ -9,6 +9,11 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
+ module.exports = {
+  timeout: 60000, // Aumenta el tiempo de espera global a 60 segundos
+};
+
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */

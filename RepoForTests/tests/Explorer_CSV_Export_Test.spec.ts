@@ -6,6 +6,9 @@ dotenv.config();
 test('Export CSV Test', async ({ page }) => {
 // Login to Axle QA account through google
   await page.goto('https://www.google.com/');
+// Line added due to the default Language of the browser because of the ip.
+  await page.click('text="English"');
+  await page.waitForTimeout(1000);
   await page.getByLabel('Sign in').click();
   await page.waitForTimeout(2000);
   await page.getByLabel('Email or phone').fill(process.env.Explorer_USER);
